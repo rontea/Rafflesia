@@ -1,0 +1,54 @@
+#Company
+entity.companies.collection_tab:
+  route_name: entity.companies.collection
+  base_route: system.admin_content
+  title: 'Company'
+
+entity.page_edit:
+  route_name: entity.company.edit_form
+  base_route: entity.company.canonical
+  title: Edit
+
+entity.delete_confirm:
+  route_name:  entity.company.delete_form
+  base_route:  entity.company.canonical
+  title: Delete
+  weight: 10
+  
+entity.view:
+  route_name: entity.company.canonical
+  base_route: entity.company.canonical
+  title: View
+
+company.settings_tab:
+  route_name: entity.companies_settings
+  title: Settings
+  base_route: entity.companies_settings
+
+#Events
+
+entity.events.collection_tab:
+  route_name: entity.events.collection
+  base_route: system.admin_content
+  title: 'Events'
+
+events.entity.page_edit:
+  route_name: entity.events.edit_form
+  base_route: entity.events.canonical
+  title: Edit Events
+  
+events.entity.delete_confirm:
+  route_name:  entity.events.delete_form
+  base_route:  entity.events.canonical
+  title: Delete Events
+  weight: 10
+  
+events.entity.view:
+  route_name: entity.events.canonical
+  base_route: entity.events.canonical
+  title: View Events
+
+events.settings_tab:
+  route_name: entity.events_settings
+  title: Settings
+  base_route: entity.events_settings

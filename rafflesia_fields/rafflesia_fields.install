@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implement hook_update
+ * 
+ */
+
+function rafflesia_fields_update_8003(&$sandbox) {
+
+  $color_hexa = array(
+    'description' => 'Color of the user in Graph',
+    'type' => 'varchar',
+    'length' => '255',
+    'not null' => TRUE,
+    'default' => '#ffffff',
+  );
+  
+ // get a connection 
+ $schema = Drupal\Core\Database\Database::getConnection()->schema();
+ // create the field
+
+ $schema->addField('user__field_user_infomation', 'field_user_infomation_color_hexa', $color_hexa);
+ 
+ if ($some_error_condition_met) {
+    throw new UpdateException('Error on Update');
+  }
+  
+}
+
+
+
+

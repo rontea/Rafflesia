@@ -1,0 +1,8 @@
+name: Rafflesia Events
+description: Event Mitigation Checklist (Working in Progress)
+package: rafflesia module
+type: module
+dependencies:
+  - rafflesia
+core: 8.x
+configure: rafflesia.admin_settings

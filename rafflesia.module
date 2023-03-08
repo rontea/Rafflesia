@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function rafflesia_theme($existing, $type, $theme, $path) {
+  return array(
+    'chart' => array(
+      'variables' => array('var' => NULL),
+    ),
+    'stackedChart' => array(
+      'variables' => array('var' => NULL),
+    ),
+    
+  );
+}
+
+use Drupal\Core\Routing\RouteMatchInterface;
+ 
+ 
+/**
+* Implements hook_help().
+*/
+
+function rafflesia_help($route_name, RouteMatchInterface $route_match) {
+ switch ($route_name) {
+   // Main module help for the easydrupal_breadcrumb module.
+   case 'rafflesia.report_today':
+     $output = '<p> Help Option </p>';
+     return $output;
+ 
+ 
+   default:
+ }
+}

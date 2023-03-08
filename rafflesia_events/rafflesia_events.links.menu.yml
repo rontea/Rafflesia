@@ -1,0 +1,12 @@
+#Company
+rafflesia_events.admin.structure.settings:
+  title: Company Settings
+  description: 'Configure Company Settings'
+  route_name:  entity.company_settings
+  parent: system.admin_structure
+#Event
+rafflesia_events.admin.events.structure.settings:
+  title: Events Settings
+  description: 'Configure Events Settings'
+  route_name:  entity.events_settings
+  parent: system.admin_structure

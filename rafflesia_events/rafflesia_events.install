@@ -1,0 +1,65 @@
+<?php
+
+/*
+ * Implements hook_schema
+ */
+
+function rafflesia_events_schema(){
+ 
+    /* Event Assoc */
+    
+    $schema['rafflesia_assoc_events'] = array (
+      'description' => 'Stores the Company and Event Relation',
+      'fields' => array (
+        'id' => array(
+          'description' => 'The primary identifier for the record.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'company_id' => array (
+          'description' => 'The Company Id',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'event_id' => array (
+          'description' => 'The Event Id',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+      ),
+      'primary key' => array('id'),  
+    ); 
+    
+  /**
+   *  Cecklist
+   */  
+    
+    $schema['rafflesia_events_checklist'] = array (
+      'description' => 'Stores the Company Checklist',
+      'fields' => array (
+        'id' => array(
+          'description' => 'The primary identifier for the record.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'event_id' => array (
+          'description' => 'The Event Id',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        
+        
+      ),
+      'primary key' => array('id'),  
+    ); 
+    
+    
+    
+  return $schema;
+}
+

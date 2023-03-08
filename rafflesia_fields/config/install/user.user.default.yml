@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_user_infomation
+  module:
+    - rafflesia_fields
+  _core:
+    default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
+  id: user.user.default
+  targetEntityType: user
+  bundle: user
+  mode: default
+  content:
+  field_user_infomation:
+    type: userinformation_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  

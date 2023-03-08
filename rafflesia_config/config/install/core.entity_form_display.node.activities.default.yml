@@ -1,0 +1,24 @@
+## This file tells Drupal how the form should be displayed when creating a new node of our custom content type.
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.activities.body
+        - node.type.activities
+    module:
+        - text
+        - user
+id: node.activities.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+    body:
+        label: hidden
+        type: text_textarea_with_summary
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }

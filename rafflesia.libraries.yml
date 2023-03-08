@@ -1,0 +1,39 @@
+rafflesia_main_js:
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+#rafflesia_jsbase_chart:
+  
+    
+rafflesia_js_chart1:
+  remote: https://github.com/chartjs/Chart.js/releases/tag/v2.5.0
+  version: 2.5.0
+  license:
+    name: MIT
+    url: https://github.com/chartjs/Chart.js/blob/master/LICENSE.md  
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/chart.js: {}  
+    js/rafflesia_js_chart.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+
+rafflesia_js_stacked_chart:
+  remote: https://github.com/chartjs/Chart.js/releases/tag/v2.5.0
+  version: 2.5.0
+  license:
+    name: MIT
+    url: https://github.com/chartjs/Chart.js/blob/master/LICENSE.md  
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/chart.js: {}  
+    js/rafflesia_chart_stacked.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings

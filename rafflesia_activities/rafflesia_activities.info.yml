@@ -1,0 +1,8 @@
+name: Rafflesia Activities
+description: 'Activate Activity Module for Adding new Activities (Add This)'
+package: rafflesia module
+type: module
+dependencies:
+  - rafflesia
+core: 8.x
+configure: rafflesia.admin_settings

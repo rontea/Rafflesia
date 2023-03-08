@@ -1,0 +1,167 @@
+<?php
+
+/**
+ * Implement hook_update
+ * 
+ */
+
+
+
+function rafflesia_update_8001(&$sandbox) {
+  $activity_archive = array(
+    'type' => 'varchar',
+    'description' => "Set 0 if this is not and 1 if archive",
+    'type' => 'int',
+    'default' => 0,
+  ); 
+  
+
+  
+ // get a connection 
+ $schema = Drupal\Core\Database\Database::getConnection()->schema();
+ // create the field
+ $schema->addField('rafflesia_tasks', 'activity_archive', $activity_archive);
+ 
+ if ($some_error_condition_met) {
+    throw new UpdateException('Error on Update');
+  }
+  
+}
+
+/*
+ * Implements hook_schema
+ *
+ */
+
+function rafflesia_schema(){
+    /* Association of User */
+    $schema['rafflesia_assoc_user'] = array (
+      'description' => 'Stores the Manager and user Relation',
+      'fields' => array (
+        'id' => array(
+          'description' => 'The primary identifier for the record.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'wsmid' => array (
+          'description' => 'The WSM ID.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'managerId' => array (
+          'description' => 'The Manager ID',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+      ),
+      'primary key' => array('id'),
+      
+    );
+    /* Rafflesia Message Notice */
+    $schema['rafflesia_notice'] = array (
+      'description' => 'Stores Title, Notice Message, timestamp, nid and uid for the Notice.',
+      'fields' => array(
+        'id' => array(
+          'description' => 'The primary identifier for the record.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'uid' => array(
+          'description' => 'The user who added it.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'notice_title' => array(
+          'description' => 'The Notice Title',
+          'type' => 'text',
+          'size' => 'small',
+          'not null' => TRUE,
+        ),
+        'notice_message' => array (
+          'description' => 'The Notice Message',
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => TRUE, 
+        ),
+        'created' => array(
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => 'Timestamp of Creation',
+        ),  
+      ),
+      'primary key' => array('id'),
+    );
+    
+    /* Rafflesia Tasks */
+    $schema['rafflesia_tasks'] = array (
+      'description' => 'Stores Task of user',
+      'fields' => array (
+        'id' => array(
+          'description' => 'The primary identifier for the record.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+        'uid' => array(
+          'description' => 'The user/WSM who added it.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'manager_id' => array(
+          'description' => 'The Manager ID for Activity Population',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'activity_id' => array(
+          'description' => 'Get The Activity id',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'activity_archive' => array(
+          'description' => 'Set 0 if this is not and 1 if archive',
+          'type' => 'int',
+          'default' => 0,
+        ),
+        'tasks_subject' => array (
+          'description' => 'The Task Subject',
+          'type' => 'text',
+          'size' => 'small',
+          'not null' => TRUE,
+        ),
+        'tasks_volume' => array (
+          'description' => 'Number of Task Made',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ),
+        'tasks_date' => array(
+          'description' => 'Converted Date',
+          'type' => 'text',
+          'size' => 'small',
+          'not null' => TRUE,
+        ),   
+        'tasks_timestamp' => array(
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => 'Timestamp of Task',
+        ),   
+      ),
+      'primary key' => array('id'),
+      'indexes' => array(
+        'tasks_timestamp' => array('tasks_timestamp'),
+      ), 
+    );
+     
+  return $schema;
+}
+

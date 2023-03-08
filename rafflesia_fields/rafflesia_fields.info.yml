@@ -1,0 +1,8 @@
+name: Rafflesia Fields
+type: module
+description: 'Install the Rafflesia Fields Which Include The Setting of First Name, Last Name and Type [ Manager or WSM ] add this'
+package: rafflesia module
+core: 8.x
+# module requirement
+dependencies:
+  - rafflesia

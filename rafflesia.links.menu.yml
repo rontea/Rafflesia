@@ -1,0 +1,58 @@
+# Rafflesia Admin Setting #
+rafflesia.admin_settings:
+  title: 'Rafflesia Settings'
+  description: 'List the user'
+  route_name: rafflesia.setting_page
+  parent: system.admin_reports
+  weight: 10
+
+# Rafflesia Assoc User Add  
+rafflesia.assoc_user:
+  title: 'Association of User'
+  description: 'Associate User'
+  route_name: rafflesia.assoc_form
+  weight: 20
+  menu_name: main
+
+# Rafflesia Assoc User Delete 
+rafflesia.assoc_delete_user:
+  title: 'Delete Association of User'
+  description: 'Remove to My Team'
+  route_name: rafflesia.edit_my_wsm_form
+  weight: 30
+  menu_name: main 
+
+# Rafflesia Add Tasks 
+rafflesia.tasks_user:
+  title: 'Add Task'
+  description: 'Add a New Task'
+  route_name: rafflesia.tracker_form
+  weight: 40
+  menu_name: main
+  
+# Archieve Adding
+rafflesia.tasks_archieve_user:
+  title: 'Add Task Archieve'
+  description: 'Add Past Task'
+  route_name: rafflesia.archieve_task
+  weight: 50
+  menu_name: main
+
+# My Report Individual
+rafflesia.my_report:
+  title: 'My Report'
+  description: 'Display Report'
+  route_name: rafflesia.my_report
+  weight: 60
+  menu_name: main
+  
+  
+# Today's Report
+rafflesia.today_report:
+  title: 'Report Today'
+  description: 'Display Report'
+  route_name: rafflesia.report_today
+  weight: 70
+  menu_name: main
+
+

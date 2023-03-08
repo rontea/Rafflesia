@@ -1,0 +1,13 @@
+## Define the Info of raffesia module
+
+name: Rafflesia Module
+description: Tracking System of WSM 
+package: Rafflesia Module Main
+type: module
+dependencies:
+  - block
+  - views
+  - filter
+version: 8.x-1.x-dev
+core: 8.x
+configure: rafflesia.admin_settings

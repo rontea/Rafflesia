@@ -1,0 +1,22 @@
+#Company
+'delete company entity':
+  title: Delete entity content of Company.
+'add company entity':
+  title: Add entity content of Company.
+'view company entity':
+  title: View entity content of Company.
+'edit company entity':
+  title: Edit entity content of Company.
+'administer company entity':
+  title: Administer settings of Company.
+#Event 
+'administer events entity':
+  title: Administer settings of Events.
+'add events entity':
+  title: Add entity content of Events.
+'view events entity':
+  title: View entity content of Events.
+'edit events entity':
+  title: Edit entity content of Events.
+'delete events entity':
+  title: Delete entity content of Events.

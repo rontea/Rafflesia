@@ -1,0 +1,8 @@
+name: Rafflesia Graphs
+type: module
+description: 'Install Graphs of Rafflesia (Working in Progress) do not install'
+package: rafflesia module
+core: 8.x
+# module requirement
+dependencies:
+  - rafflesia

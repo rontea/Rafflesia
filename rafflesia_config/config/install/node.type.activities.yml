@@ -1,0 +1,14 @@
+#
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - rafflesia_activities
+name: 'Activities'
+type: activity
+description: 'Content type that can be used for Activity Listing, Adding, Updating and Deleting'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

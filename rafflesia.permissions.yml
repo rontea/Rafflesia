@@ -1,0 +1,15 @@
+view rafflesia_tasks:
+  title: 'View Rafflesia Task Tracker Form'
+  description: 'View and submit Raflesia Tasks'
+
+view rafflesia_userAssoc:
+  title: 'Do a association with users'
+  description: ' Submit Assocition to User'
+
+view rafflesia calendar report:
+  title: 'Grant Access View Calendar Report'
+  description: 'View the Calendar Report on Rafflesia Calendar'
+
+view rafflesia_setting:
+  title: 'View and Edit Setting'
+  description: 'View and Edit the Setting of Rafflesia'

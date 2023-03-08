@@ -1,0 +1,10 @@
+name: Rafflesia Config
+type: module
+description: 'Content Type, .... Working in Progress'
+package: rafflesia module
+core: 8.x
+# module requirement
+dependencies:
+  - options
+  - rafflesia
+  - entity_reference

@@ -1,0 +1,9 @@
+# add Create Button on activities
+activity.add:
+  #this is on routing entity.activity.activity_add
+  route_name: entity.activity.activity_add
+  title: 'Add Activity'
+  appears_on:
+    #this is on routing entity.activities.collection
+    - entity.activities.collection
+    - entity.activity.canonical

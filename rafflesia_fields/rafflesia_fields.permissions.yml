@@ -1,0 +1,3 @@
+view rafflesia_fields:
+  title: 'View and Edit Rafflesia Fields'
+  description: 'Rafflesia Field Access should only be set to Admin and Managers'

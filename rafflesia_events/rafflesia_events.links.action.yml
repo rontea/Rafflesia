@@ -1,0 +1,17 @@
+#Company
+company.add:
+  route_name: entity.company.company_add
+  title: 'Add Company'
+  appears_on:
+    #this is on routing entity.companies.collection
+    - entity.companies.collection
+    - entity.companies.canonical
+
+#Events
+events.add:
+  route_name: entity.events.events_add
+  title: 'Add Event'
+  appears_on:
+    #this is on routing entity.companies.collection
+    - entity.events.collection
+    - entity.events.canonical

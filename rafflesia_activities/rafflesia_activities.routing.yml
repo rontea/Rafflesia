@@ -1,0 +1,48 @@
+#collection show the list
+entity.activities.collection:
+  path: '/admin/content/activities'
+  defaults:
+    _entity_list: 'activity'
+    _title: 'Activities'
+  requirements:
+    _permission: 'view activity entity'
+    
+#add create the button - need access handler
+entity.activity.activity_add:
+  path: '/activities/add'
+  defaults:
+    _entity_form: activity.add
+    _title: 'Add Activity'
+  requirements:
+    _entity_create_access: 'activity'
+
+#edit form - also added in links.tasks
+entity.activity.edit_form:
+  path: '/activities/{activity}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the activity entity.
+    _entity_form: activity.edit
+    _title: 'Edit Activity'
+  requirements:
+    _entity_access: 'activity.edit'
+    
+#cannonical  - also added in links.tasks
+entity.activity.canonical:
+  path: '/activities/{activity}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the contact entity
+    _entity_view: 'activity'
+    _title: 'Activity Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'activity.view' 
+
+#delete - also added in links.tasks
+entity.activity.delete_form:
+  path: '/activities/{activity}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: activity.delete
+    _title: 'Delete Activity'
+  requirements:
+    _entity_access: 'activity.delete'   

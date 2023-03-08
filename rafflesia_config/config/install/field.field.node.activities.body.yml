@@ -1,0 +1,22 @@
+## This file will add the body field to our content type.
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.body
+        - node.type.activities
+    module:
+        - text
+id: node.activities.body
+field_name: body
+entity_type: node
+bundle: activity
+label: Body
+description: 'More specific information about the Activities.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+    display_summary: true
+field_type: text_with_summary

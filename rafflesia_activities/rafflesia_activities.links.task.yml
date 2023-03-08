@@ -1,0 +1,23 @@
+entity.activities.collection_tab:
+  route_name: entity.activities.collection
+  base_route: system.admin_content
+  title: 'Activities'
+
+# added in route
+entity.page_edit:
+  route_name: entity.activity.edit_form
+  base_route: entity.activity.canonical
+  title: Edit
+  
+# delete added in route
+
+entity.delete_confirm:
+  route_name:  entity.activity.delete_form
+  base_route:  entity.activity.canonical
+  title: Delete
+  weight: 10
+  
+entity.view:
+  route_name: entity.activity.canonical
+  base_route: entity.activity.canonical
+  title: View

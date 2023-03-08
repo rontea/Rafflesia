@@ -1,0 +1,123 @@
+# Rafflesia Setting page   
+rafflesia.setting_page:
+  path: '/admin/reports/RafflesiaSetting'
+  defaults:
+    _controller: '\Drupal\rafflesia\Controller\SettingController::customPage'
+    _title: 'Rafflesia Setting'
+  requirements:
+    _permission: 'rafflesia_setting'
+
+#Form Task Tracker     
+rafflesia.tracker_form:
+  path: '/task/addTask'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\RafflesiaTaskTrackerForm'
+    _title: 'Task Tracker'
+  requirements:
+    _permission: 'view rafflesia_tasks'
+
+#Form Assoc User Add   
+rafflesia.assoc_form:
+  path: '/usersetting/add'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\RafflesiaUserAddForm'
+    _title: 'Add User To My List'
+  requirements:
+    _permission: 'view rafflesia_userAssoc'
+ 
+# Form Assoc User Delete   
+rafflesia.edit_my_wsm_form:
+  path: '/usersetting/delete'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\RafflesiaDeleteMyWSMForm'
+    _title: 'Delete User On My Team'
+  requirements:
+    _permission: 'view rafflesia_userAssoc'    
+
+# Form Input Date Form
+rafflesia.my_report:
+  path: '/myreport'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\RafflesiaMyReportForm'
+    _title: 'My Report'
+  requirements:
+    _permission: 'view rafflesia calendar report' 
+
+#Controller from Input Date Form to Calendar page to generate information
+rafflesia.report_individual:
+  path: '/calendar/{from}/{to}'
+  defaults:
+    _controller: '\Drupal\rafflesia\Controller\ReportController::build'
+    _title: 'Calendar'
+    from: ''
+    to: ''
+  requirements:
+    _permission: 'view rafflesia calendar report'
+    
+# Today's Report
+rafflesia.report_today:
+  path: '/calendar/report/today'
+  defaults:
+    _controller: '\Drupal\rafflesia\Controller\MyReportTodayController::reportToday'
+    _title: 'Report Today'
+  requirements:
+    _permission: 'view rafflesia calendar report'
+
+# edit
+rafflesia.report_today_edit:
+  path: '/calendar/MyActivity/edit/{id}/{path}/{from}/{to}'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\MyActivityEdit'
+    _title: 'Edit Activity'
+    id: ''
+    path: ''
+    from: ''
+    to: ''
+  requirements:
+    _permission: 'view rafflesia calendar report'
+
+# delete
+rafflesia.report_today_edit_delete:
+  path: '/calendar/MyActivity/delete/{id}/{path}/{from}/{to}'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\MyActivityDelete'
+    _title: 'Delete Activity'
+    id: ''
+    path: ''
+    from: ''
+    to: ''
+  requirements:
+    _permission: 'view rafflesia calendar report'
+
+# Team's Report
+rafflesia.report_team:
+  path: '/calendar/team/{from}/{to}'
+  defaults:
+    _controller: '\Drupal\rafflesia\Controller\TeamReportController::build'
+    _title: 'Calendar'
+    from: ''
+    to: ''
+  requirements:
+    _permission: 'view rafflesia calendar report'
+
+# Stacked Report
+
+rafflesia.report_team_stacked:
+  path: '/stackedreport/{from}/{to}'
+  defaults:
+    _controller: '\Drupal\rafflesia\Controller\StackedReportController::build'
+    _title: 'Report Stacked'
+    from: ''
+    to: ''
+  requirements:
+    _permission: 'view rafflesia calendar report'
+       
+# archieve adding
+rafflesia.archieve_task: 
+  path: '/task/archieve'
+  defaults:
+    _form: '\Drupal\rafflesia\Form\RafflesiaTaskTrackerArchieve'
+    _title: 'Archieve Task Tracker'
+  requirements:
+    _permission: 'view rafflesia_tasks'
+    

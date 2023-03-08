@@ -1,0 +1,10 @@
+'delete activity entity':
+  title: Delete entity content of Activity.
+'add activity entity':
+  title: Add entity content of Activity.
+'view activity entity':
+  title: View entity content of Activity
+'edit activity entity':
+  title: Edit entity content of Activities
+'administer activity entity':
+  title: Administer settings of Activities
